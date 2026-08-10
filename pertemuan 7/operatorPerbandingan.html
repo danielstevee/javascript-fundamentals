@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/output.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1 id="cek=" class="bg-blue-500 text-white py-4 text-center"> </h1> 
+    <h1 id="cek!=" class="bg-green-500 text-white py-4 text-center"> </h1>
+    <h1 id="cek3" class="bg-red-500 text-white py-4 text-center"> </h1>
+    <h1 id="cek4" class="bg-yellow-500 text-white py-4 text-center"> </h1>
+    <h1 id="cek5" class ="bg-blue-500 text-white py-4 text-center""></h1>
+
+    
+
+    <script>
+        //jadi beda nya, kalau == itu hanya membandingkan value nya saja, sedangkan === itu membandingkan value dan tipe data nya juga. sama halnya dengan != dan !==
+        //jadi beda nya, kalau lebih besar > dibandingkan dengan value yang sama contoh 10>10 akan false, tapi kalau pake >= maka akan true 
+    let username = "admin";
+    let password = "admin";
+
+    let username2 = "admin";
+    let password2 = "admin123";
+
+    let username3 = "123";
+    let password3 = 123;
+
+    let username4 = "123";
+    let password4 = 123;
+
+    let a = 10;
+    let b = 10;
+    document.getElementById("cek5").textContent = (a > b); 
+
+    document.getElementById("cek=").textContent = (username == password); //benar karena let username dan password sama-sama "admin"
+    document.getElementById("cek!=").textContent = (username2 != password2); //benar karena let username dan password tidak sama-sama "admin"
+    document.getElementById("cek3").textContent = (username3 === password3); //salah karena let username3 tipe data nya  string sedangkan let password3 tipe data nya number
+    document.getElementById("cek4").textContent = (username4 !== password4); //benar karena let username4 tipe data string dan password4 tipe data number jadi tidak sama itu benar
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="Pesan" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+    //while ini untuk perulangan yang kita tidak tau kapan harus berenti
+      
+    //tes 1
+        let username= prompt("Masukan Username Anda");
+        while(username !== "admin"){
+            alert("Username Salah");
+            username= prompt("Masukan Username Anda");
+        }
+        alert("Username Benar");
+
+    //tes 2
+        let pinBenar= "133523"
+        let pinInput= "";
+        let kesempatan = 3;
+
+        while(pinInput !== pinBenar && kesempatan > 0){
+            pinInput=prompt("Masukan Pin Anda");
+            if(pinInput === pinBenar){
+                alert("Pin Benar");
+            } else{
+                kesempatan--;
+                alert("Pin Salah, Coba Lagi")
+            }
+        } 
+        if (kesempatan === 0){
+            alert("Kesempatan Habis");
+        }
+    
+    </script>
+
+</body>
+
+</html>

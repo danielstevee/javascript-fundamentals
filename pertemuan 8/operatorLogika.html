@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<h1 id="username1" class="bg-blue-500 text-white py-4 text-center"> </h1>
+<h1 id="username2" class="bg-red-500 text-white py-4 text-center"> </h1>
+<h1 id="username3" class="bg-green-500 text-white py-4 text-center"> </h1>
+<h1 id="teks" class="bg-yellow-500 text-white py-4 text-center"> </h1>
+
+    <script>
+        //&& jika keduanya kondisi benar maka hasilnya true, jika salah satu saja yang salah maka hasilnya false
+        //|| jika salah satu kondisi benar atau kedua kondisi benar maka hasilnya true, jika keduanya salah maka hasilnya false
+        //! jika kondisi benar maka hasilnya false, jika kondisi salah maka hasilnya true
+
+        let string1 = "belajar";
+        let string2 = "javascript";
+        let string3 = "2026";
+
+        document.getElementById("teks").textContent = (string1 + " " + string2 + " " + string3);
+
+        let username = "admin";
+        let password = 13;
+        let username2 = "admin";
+        let password2 = "123";
+        let username3 = "admin";
+        let password3 = "admin12";
+        document.getElementById("username1").textContent = (username === "admin" && password === 13); //hasil true karena kedua kondisi benar
+        document.getElementById("username2").textContent = (username2 === "admin" || password2 === 123); //hasil tetap true karena kondisi 1 benar, walaupun kondisi 2 salah karena tipe data tidak sama
+        document.getElementById("username3").textContent = !(username3 === "admn" && password3 === "admin12");
+    </script>
+
+</body>
+
+</html>

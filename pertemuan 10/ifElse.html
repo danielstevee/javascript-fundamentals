@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section class="mx-auto max-w-6xl justify-center mt-10">
+        <form onsubmit="return false;">
+            <div>
+                <label for="ambil" class="block text-sm font-medium text-gray-700">Username / Email</label>
+                <input type="text" id="ambil" name="ini untuk id database" required
+                    class="mt-3 w-full rounded-md border border-gray-300 p-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    placeholder="Masukkan username kamu" />
+                    <button onclick="cekLogin()" class="mt-3 rounded bg-blue-500 px-4 py-2 text-white">Cek Login
+</button>
+            </div>
+        </form>
+    </section>
+
+    <h1 id="pesan" class=" text-blue-700 py-4 text-center"></h1>
+
+    <script>
+
+        function cekLogin(){
+        let inputUser = document.getElementById("ambil").value;
+        if (inputUser === "admin"){
+        document.getElementById("pesan").textContent=("HI " +  inputUser);
+        } else {
+        document.getElementById("pesan").textContent=("Kamu Salah");
+        }
+        }
+
+        let username = "admin";
+        let password = 1234;
+
+        if (username === "admin" && password === 1234){
+            console.log("HALO " + username );
+        }else {
+            console.log("Salah")
+        }
+    
+
+
+
+
+        let saldo = 1000;
+
+        if (saldo >= 50000) {
+            console.log("Saldo anda cukup untuk melakukan pembelian");
+        } else {
+            console.log("Saldo anda tidak cukup untuk melakukan pembelian");
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

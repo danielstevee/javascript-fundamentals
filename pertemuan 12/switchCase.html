@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="Pesan" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+    let statusPesanan = "DIPROSES";
+
+    switch(statusPesanan){
+        case "DIPROSES":
+        document.getElementById("Pesan").textContent=("Pesanan sedang dikemas oleh penjual");
+        break;
+        
+        case "DIKIRIM":
+        document.getElementById("Pesan").textContent=("Pesanan dalam perjalanan oleh kurir");
+        break;
+
+        case "SELESAI":
+        document.getElementById("Pesan").textContent=("Pesanan telah diterima oleh pembeli");
+        break;
+
+        default:
+        document.getElementById("Pesan").textContent=("Belum ada pesanan");
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <h1 id="pesan1" class="text-blue-900 py-4 text-center"></h1>
+    <h1 id="pesan" class=" text-blue-700 py-4 text-center"></h1>
+
+    <script>
+        let nilai = 60;
+
+        if(nilai >= 100){
+            document.getElementById("pesan").textContent=("Sangat Bagus");
+        }else if(nilai >= 80)
+        {
+            document.getElementById("pesan").textContent=("Bagus");
+        }else if(nilai >= 50)
+        {
+            document.getElementById("pesan").textContent=("Tidak Bagus");
+        }else
+        {
+            document.getElementById("pesan").textContent=("Belajar lagi");
+        }
+
+        let belanja = 101000;
+
+        if(belanja >= 150000){
+            document.getElementById("pesan1").textContent=("Diskon 30%");
+        }else if(belanja >= 100000){
+             document.getElementById("pesan1").textContent=("Diskon 20%");
+        }else if (belanja >= 50000){
+             document.getElementById("pesan1").textContent=("Diskon 10%");
+        }else {
+            document.getElementById("pesan1").textContent=("Total Belanja Anda: " + belanja );
+        }
+    </script>
+
+</body>
+
+</html>

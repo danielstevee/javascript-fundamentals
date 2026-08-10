@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/output.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1 id="iniId" class ="bg-blue-500 text-white py-4 text-center"> </h1>
+  <h1 id="kurang" class ="bg-red-500 text-white py-4 text-center"> </h1>
+  <h1 id="bagi" class ="bg-green-500 text-white py-4 text-center"> </h1>
+  <h1 id="uangku" class ="bg-yellow-500 text-white py-4 text-center"> </h1>
+  
+  <script>
+    let Uangku = 10000;
+    let HargaBuku = 5000;
+    document.getElementById("uangku").textContent="Sisa Uang:" + (Uangku - HargaBuku);
+
+
+    let a = 10;
+    let b = 5;
+    let hasil = a + a;
+
+    document.getElementById("bagi").textContent="Hasil Pembagian: " + (a / b);
+
+    document.getElementById("kurang").textContent="hasil Pengurangan: " + (a - b);
+
+    document.getElementById("iniId").textContent = "Hasil Penjumlahan: " + (a + b);
+    
+    console.log("Ini dari let hasil "+(hasil));
+    console.log("Hasil Penjumlahan: " + (a + b));
+    
+  </script>
+
+    
+</body>
+</html>
