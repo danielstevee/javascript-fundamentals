@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="Isi" class="bg-blue-500 text-white py-4 text-center"> </h1>
+    <h1 id="pesan1" class="bg-blue-500 text-white py-2 text-center mb-2"></h1>
+    <h1 id="pesan2" class="bg-red-500 text-white py-2 text-center mb-2"></h1>
+    <h1 id="pesan3" class="bg-green-500 text-white py-2 text-center"></h1>
+    <script>
+
+        function pesan(nama) {
+            document.getElementById("Isi").textContent = ("Hai, Selamat Datang " + (nama));
+        }
+        pesan("Daniel");
+
+        //funtion ini ibarat mesin pencetak
+        function sapaUser(idwadah, nama) {
+            document.getElementById(idwadah).textContent = ("Hai, Selamat Datang " + (nama));
+        }
+
+        //Daftar data yang mau dicetak
+        let daftarUser = [
+            { id: "pesan1", nama: "Budi" },
+            { id: "pesan2", nama: "Siti" },
+            { id: "pesan3", nama: "Daniel" }
+        ];
+
+        //pegawai eksekusi tombol untuk cetak 
+        for (let user of daftarUser) {
+            sapaUser(user.id, user.nama);
+        }
+
+
+        //contoh ke 2
+        function tampilkanHarga(namaBarang, harga) {
+            console.log("Harga " + namaBarang + " adalah Rp " + harga);
+        }
+
+        let daftarProduk = [
+            { id: "Sepatu", harga: 150000 },
+            { id: "Baju", harga: 75000 },
+            { id: "Topi", harga: 30000 }
+        ]
+
+        for (let user of daftarProduk) {
+            tampilkanHarga(user.id, user.harga);
+        }
+
+    </script>
+
+</body>
+
+</html>
