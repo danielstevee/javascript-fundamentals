@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="judul" class=" text-black font-bold text-5xl my-8 text-center"> Judul Saat Ini </h1>
+
+    <h2>
+        daniel
+    </h2>
+    <div class="kartu max-w-6xl mx-auto ">
+        <divm class="grid grid-cols-4 gap-5"> 
+            <div class=" card2 p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card2 p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card2 p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card2 p-20 bg-blue-400 ">
+                
+            </div>
+            
+            <div class=" card p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card p-20 bg-blue-400 ">
+                
+            </div>
+            <div class=" card p-20 bg-blue-400 ">
+                
+            </div>
+
+        </div>
+    </div>
+
+    <section id="home">
+    <div class="hero max-w-6xl mx-auto mt-8">
+        <div class="flex flex-row gap-x-9 justify-center items-center">
+        <h1 class="font-bold px-20 py-9 text-7xl  bg-amber-500  text-blue-950">
+           Coding Itu Seru
+        </h1>
+        <div class="px-30 bg-blue-950 py-18">
+        </div>
+    </div>
+    </section>
+    
+
+    <script>
+    
+    //ini untuk 1 kompenen saja <h1> dgn id judul
+    let simpan = document.getElementById("judul");
+    console.log(simpan);
+
+    
+
+    //ini untuk banyak element seperti grup dan memiliki indeks seperti array (perlu dark.length untuk bisa membaca urutan index card yang disimpan di let dark)
+    //1 pake perulangan for 
+    let dark = document.getElementsByClassName("card");
+    for(let i = 0; i < dark.length; i++ ){
+        dark[i].style.backgroundColor = "#222";
+    }
+    //2 pake perulangan for of (let item untuk menyimpan urutan index dari let yellow yang menyimpan index card2 [0.1.2.3])
+    let yellow = document.getElementsByClassName("card2");
+    for (let item of yellow){
+        item.style.backgroundColor = "#222";
+    }
+
+
+    //Tag HTML langsung -> querySelector("h2")
+    let selector = document.querySelector("h2");
+    console.log(selector);
+
+    //ID pakai -> (#)
+    let selector2 = document.querySelector("#judul");
+    console.log(selector2);
+
+    //Class pakai -> (.)
+    let selector3 = document.querySelector(".kartu");
+    console.log(selector3);
+
+    //Spesifik Selector untuk menargetkan elemen tertentu tanpa menggangu elemen serupa di bagian lain
+    let selector4 = document.querySelector("#home .hero h1");
+    console.log(selector4)
+    </script>
+
+
+</body>
+
+</html>
