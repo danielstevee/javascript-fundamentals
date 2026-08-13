@@ -55,6 +55,13 @@
         </div>
     </div>
     </section>
+
+    <section id ="kontak">
+        <div class="get">
+        <h2 class="teks"> Get Know Us</h2>
+        <p class="teks">Call me</p>
+        </div>
+    </section>
     
 
     <script>
@@ -64,6 +71,7 @@
     console.log(simpan);
 
     
+
 
     //ini untuk banyak element seperti grup dan memiliki indeks seperti array (perlu dark.length untuk bisa membaca urutan index card yang disimpan di let dark)
     //1 pake perulangan for 
@@ -76,6 +84,8 @@
     for (let item of yellow){
         item.style.backgroundColor = "#222";
     }
+
+
 
 
     //Tag HTML langsung -> querySelector("h2")
@@ -91,8 +101,14 @@
     console.log(selector3);
 
     //Spesifik Selector untuk menargetkan elemen tertentu tanpa menggangu elemen serupa di bagian lain
-    let selector4 = document.querySelector("#home .hero h1");
+    let selector4 = document.querySelector("#home, .hero, h1");
     console.log(selector4)
+
+    //Mengambil semua element yang nama nya sama, mirip getElementByClassName. beda nya ini bisa akses id, class, tag.
+    let kontak = document.querySelectorAll("#kontak, .get, .teks");
+    console.log(kontak)
+
+    
     </script>
 
 
