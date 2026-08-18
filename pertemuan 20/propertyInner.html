@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id ="main">
+        <h1 class="judul">judul awal</h1>
+        <p class="paragaf">paragaf 1</p>
+        <p class="paragaf hidden">paragaf 2</p>
+    </section>
+
+    
+
+
+    <script>
+        // innerHTML   ➔ bisa ngetik Teks + Kode Tag HTML-nya contoh ngisi di form pake tag <h1> bisa
+        let simpanjudul=document.querySelector("#main .judul");
+        simpanjudul.innerHTML="Halo, <b>Selamat Datang</b> di <i>Website Kami</i>!";
+
+        // innerText   ➔ Teks Murni yang KELIHATAN DI LAYAR SAJA (Memperhatikan CSS) kalo ada element di html yang di display none atau sembunyi tidak akan ikut ditampilkan disini
+        let mainSection = document.getElementById("main").innerText;
+        console.log(mainSection)
+        
+        // textContent ➔ SEMUA Teks Murni Mentah (Aman, Cepat, Mengabaikan CSS) mirip innerText tapi display none akan ttp tampil
+        let mainSection2 = document.getElementById("main").textContent;
+        console.log(mainSection2)
+    </script>
+
+
+</body>
+
+</html>

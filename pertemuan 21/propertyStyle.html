@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id ="main">
+        <h1 id="judul">judul awal</h1>
+        <p class="paragaf font-bold ">paragaf 1</p>
+        <p class="paragaf hidden">paragaf 2</p>
+    </section>
+
+    
+
+
+    <script>
+    //classList.add = untuk menambahkan class baru dari taiwlind yang blm di isi di html
+    let ubahjudul = document.getElementById("judul");
+    ubahjudul.classList.add("text-center","text-2xl", "font-bold",);
+    
+
+    //classList.remove = untuk menghapus class yang ada di html
+    let deskripsi2 = document.getElementsByClassName("paragaf");
+    deskripsi2[1].classList.remove("hidden");
+
+    //classList.replace = mengganti class lama ke baru tanpa hapus-tambah
+    let deksripsi1 = document.getElementsByClassName("paragaf");
+    deksripsi1[0].classList.replace("font-bold","font-ligth" );
+
+    </script>
+
+
+</body>
+
+</html>

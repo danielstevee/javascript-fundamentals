@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="main" class="text-center">
+        <div class="relative">
+            <img id="gambar" src="gambar1.jpg" alt="">
+            <div class="absolute inset-0 flex items-center justify-center ">
+                <button onclick="tombol()" id="tombol"
+                    class="hover:bg-blue-700 transition-all mt-4 px-9 py-2 rounded bg-blue-600 text-lg text-white ">Ubah
+                    Gambar </button>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        //getAttribute untuk mengakses isi atribut didalam id gambar lalu === untuk cek apakah isi nya gambar1.jpg?
+        //setAttribute merubah isi gambar dgn gambar lain
+        function tombol() {
+            let gambar = document.getElementById("gambar");
+            if (gambar.getAttribute("src") === "gambar1.jpg") {
+                gambar.setAttribute("src", "gambar2.jpg");
+            } else {
+                gambar.setAttribute("src", "gambar1.jpg");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

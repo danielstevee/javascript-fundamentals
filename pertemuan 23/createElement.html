@@ -1,0 +1,57 @@
+ <!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id ="main" class="text-center">
+    <button onclick = "tombol()" class="hover:bg-blue-700 transition-all mt-4 px-9 py-2 rounded bg-blue-600 text-lg text-white">Tambah Data</button>
+    </section>
+
+    <section id="kontak" class="text-center">
+
+    </section>
+
+
+    <script>
+    let mainsection = document.getElementById("main");
+    let tambahTeks = document.createElement("h1");
+    tambahTeks.textContent = ("JUDUL");
+    mainsection.append(tambahTeks);
+
+    function tombol(){
+    //1. akses section dulu
+    let kontaksection = document.getElementById("kontak");
+    
+    //2. create container div
+    let card = document.createElement("div");
+    card.classList.add("bg-white", "p-4", "rounded-lg", "shadow-md");
+
+    //3. create element judul
+    let judul = document.createElement("h3");
+    judul.textContent="Kartu Saya";
+    judul.classList.add("font-bold", "text-lg", "text-center")
+
+    //4. create elmennt deskripsi
+    let deskripsi = document.createElement("p");
+    deskripsi.textContent="Ini adalah deskripsi kartu yang dibuat dari JS.";
+    deskripsi.classList.add("text-gray-600", "text-center");
+
+    //5. masukan judul dan paragraf ke container div 
+    card.append(judul, deskripsi);
+
+    //6. masukan container div ke section id 
+    kontaksection.append(card);
+    }
+
+</script>
+
+
+</body>
+
+</html>
