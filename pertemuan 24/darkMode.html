@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<!-- jangan terkecoh sama hidden di js dan di html, -->
+<body id ="utama" class=" text-black transition-colors duration-300">
+
+    <section id="main" class="text-center py-20">
+
+        <h1 id="teks" class=" text-2xl font-bold "> Halo, Daniel Steven Setyawan.</h1>
+        <p id="teks2" class="hidden"> ini deskripsi nya</p>
+        <button onclick="tombol()"
+            class="hover:bg-blue-700 transition-all mt-4 px-9 py-2 rounded bg-blue-600 text-lg text-white cursor-pointer">Sembunyikan / Tampilkan & Ganti Warna</button>
+    
+        </section>
+
+        
+
+
+    <script>
+    function tombol(){
+        let teks = document.getElementById("teks2");
+        
+        let tema = document.getElementById("utama");
+        
+        teks2.classList.toggle("hidden");
+    
+
+        tema.classList.toggle("bg-black"); 
+        tema.classList.toggle("text-white"); 
+
+    }
+
+    </script>
+
+
+</body>
+
+</html>
