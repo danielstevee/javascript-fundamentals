@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="main" class="min-h-screen text-center py-20 transition-all duration-300">
+
+        <h1 id="teks" class=" text-2xl font-bold ">Halo, Selamat Datang</h1>
+        <button id="tombolubah"
+            class="hover:bg-blue-700 transition-all mt-4 px-9 py-2 rounded bg-blue-600 text-lg text-white cursor-pointer">Login</button>
+    </section>
+
+
+    <script>
+
+    //akses elemen
+    let main = document.getElementById("main");
+    let teks = document.getElementById("teks");
+    let tombolubah =  document.getElementById("tombolubah");
+
+    //fungsi yang dijalan kan
+    function ubah (){
+        
+        if (teks.innerHTML === "Halo, Selamat Datang") {
+                teks.innerHTML = "Halo, Selamat Datang Daniel";
+            } else {
+                teks.innerHTML = "Halo, Selamat Datang";
+            }
+        
+        main.classList.toggle("bg-black"); 
+        main.classList.toggle("text-white"); 
+    }
+    //jalankan event
+    tombolubah.addEventListener("click", ubah);
+    </script>
+
+
+</body>
+
+</html>
