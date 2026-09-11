@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <script>
+        //try -> function -> for -> if -> console.log (jika tidak error)
+        //try -> function -> for -> if -> throw error -> catch (jika error)
+        function checkGrades(studentGrades) {
+                                //Baca array-------- 
+            for (let i = 0; i < studentGrades.length; i++) {
+                if (typeof studentGrades[i] !== 'number') {
+                    throw new Error('Invalid input. Please provide an array of numbers.');
+                }
+
+                const grade = studentGrades[i];
+                let predicate;
+
+                if (grade >= 90) {
+                    predicate = 'A';
+                } else if (grade >= 80) {
+                    predicate = 'B';
+                } else if (grade >= 70) {
+                    predicate = 'C';
+                } else if (grade >= 60) {
+                    predicate = 'D';
+                } else {
+                    predicate = 'E';
+                }
+
+                console.log(`Grade ${i + 1}: ${grade} (${predicate})`);
+            }
+        }
+
+        try {
+            const studentGrades = [95, 85, 65, 80, 70];
+            checkGrades(studentGrades);
+        } catch (e) {
+            console.error(e);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

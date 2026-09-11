@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+<!--
+10000 <= 10000 
+   ↓
+TRUE "Kalau uang kurang ATAU sama dengan total → ERROR.
+   ↓
+throw Error ❌
+-->
+    <script>
+        //
+        //break → stop loop → program bisa lanjut.
+        //throw → terjadi error → alur normal dihentikan sampai error ditangani.tidak boleh pakai <= atau >=
+
+        const total = 10000;
+        const uang = 5000;
+
+        // coba jalankan kode
+        try{
+
+            //cek kondisi
+            if (uang < total ){
+                //Menampikan error-------------------
+                throw new Error ('Pembayaran Kurang');
+            }console.log("Transaksi berhasil");
+
+        // catch menangkap kondisi throw new Error
+        }catch(error){
+            alert(error.message);
+        }//kode yang dijalan kan bagaimanapun hasil nya
+        finally{
+            alert('Pulang dulu tambahkan uang mu');
+        }
+    </script>
+
+    
+
+</body>
+
+</html>
