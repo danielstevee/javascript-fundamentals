@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+
+        // Parent Class
+        class Hewan {
+            constructor(nama, umur) {
+                this.nama = nama;
+                this.umur = umur;
+            }
+
+            makan() {
+                console.log(`${this.nama} sedang makan`);
+            }
+
+            tidur() {
+                console.log(`${this.nama} sedang tidur`);
+            }
+        }
+        
+        //=====================================================
+
+        // Child Class 1
+        class Kucing extends Hewan {
+            mengeong() {
+                console.log(`${this.nama}: Meong!`);
+            }
+        }
+
+
+        // Child Class 2
+        class Sapi extends Hewan {
+            melenguh() {
+                console.log(`${this.nama}: Moo!`);
+            }
+        }
+
+        //=====================================================
+
+        // Membuat object Kucing
+        const kucing = new Kucing("Milo", 2);
+
+        // Membuat object Sapi
+        const sapi = new Sapi("Bobby", 5);
+
+
+        // Kucing
+        console.log("=== KUCING ===");
+        console.log(kucing.nama);
+        console.log(kucing.umur);
+
+        kucing.makan();
+        kucing.tidur();
+        kucing.mengeong();
+
+
+        // Sapi
+        console.log("=== SAPI ===");
+        console.log(sapi.nama);
+        console.log(sapi.umur);
+
+        sapi.makan();
+        sapi.tidur();
+        sapi.melenguh();
+    </script>
+
+</body>
+
+</html>

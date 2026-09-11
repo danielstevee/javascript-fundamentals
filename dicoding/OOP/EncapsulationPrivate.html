@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        
+    // # = private, jadi temperature benar-benar tidak bisa
+    // diakses langsung dari luar class
+        class CoffeeMachine {
+            #temperature = 90;
+
+            constructor(waterAmount) {
+                // waterAmount adalah data yang bisa diberikan dari luar
+                this.waterAmount = waterAmount;
+
+                this.#temperature = this.#defaultTemperature();
+            }
+            // SET = dipanggil ketika kita mencoba mengubah temperature-----
+            set temperature(temperature) {
+                console.log('you are not allowed to change the temperature');
+            }
+
+            get temperature() {
+                // Mengambil nilai private #temperature
+                return this.#temperature;
+            }
+            // # = private method, hanya bisa digunakan di dalam class
+            #defaultTemperature() {
+                // Memberi nilai default #temperature
+                return 90;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

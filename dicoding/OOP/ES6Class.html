@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            eat() {
+                console.log(`${this.name} is eating`);
+            }
+        }
+
+        // Membuat instance dari Person
+        const person1 = new Person('Alice', 30);
+        const person2 = new Person('Bob', 25);
+
+        console.log(person1.name); // Output: Alice
+        console.log(person2.name); // Output: Bob
+
+        console.log(person1.age); // Output: 30
+        console.log(person2.age); // Output: 25
+
+        person1.eat(); // Output: Alice is eating
+        person2.eat(); // Output: Bob is eating
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        class CoffeeMachine {
+            constructor(waterAmount) {
+                this.waterAmount = waterAmount;
+
+                // data internal, sebaiknya tidak diubah langsung
+                this._temperature = 90
+            }
+             // peringatan jika data mau diubah-----------------------------
+            set temperature(temperature) {
+                console.log('you are not allowed to change the temperature');
+            }
+            //ambil nilai----------------
+            get temperature() {
+                return this._temperature;
+            }
+        }
+
+        const coffee = new CoffeeMachine(10);
+        console.log('Sebelum diubah: ', coffee.temperature);
+        //simpan nilai dari get temperature & ubah nilai
+        coffee.temperature = 100;
+
+        console.log('Setelah diubah: ', coffee.temperature);
+
+
+    </script>
+
+</body>
+
+</html>

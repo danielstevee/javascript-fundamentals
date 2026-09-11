@@ -8,9 +8,56 @@
 </head>
 
 <body>
-
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
     <script>
+
+
+        function categorizeNumber(input) {
+            if (typeof input !== 'number') {
+                throw new Error('Input harus berupa bilangan bulat');
+            }
         
+                    // Cek apakah bilangan prima
+            let isPrime = input > 1;
+
+            for (let i = 2; i < input; i++) {
+                if (input % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            switch (true) {
+
+                case input < 0:
+                    return 'Negatif';
+
+                case input === 0:
+                    return 'Nol';
+
+                case isPrime:
+                    return 'Prima';
+
+                case input % 2 === 0:
+                    return 'Genap';
+
+                case input % 2 !== 0:
+                    return 'Ganjil';
+            }
+        }
+
+
+        try {
+            console.log(categorizeNumber(15));
+            console.log(categorizeNumber(12));
+            console.log(categorizeNumber(17));
+            console.log(categorizeNumber(0));
+            console.log(categorizeNumber(-5));
+
+        } catch (error) {
+            console.log(error.message);
+        } 
+
+
     </script>
 
 
