@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- = untuk ganti / timpa
+        += untuk tambah / tidak menimpa-->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <!--convertCelsiusToFahrenheit(90)
+            ↓
+        temperature = 90
+            ↓
+        const result = 9 / 5 * temperatue + 32;
+            ↓
+        return result; 194
+            ↓
+        simpan = 194-->
+    <script>
+        //result ini bagus karena hasil nya bisa kita modifikasi
+        function convertCelsiusToFahrenheit(temperatue) {
+            const result = 9 / 5 * temperatue + 32;
+            return result; //hasil di save ke const simpan
+
+        }const simpan =convertCelsiusToFahrenheit(90); // const simpan untuk menyimpan hasil nilai dari function
+        document.getElementById("iniId1").textContent += "Hasil: " + simpan;
+
+
+        
+    </script>
+
+
+
+</body>
+
+</html>

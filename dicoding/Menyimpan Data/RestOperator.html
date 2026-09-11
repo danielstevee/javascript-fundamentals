@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId3" class="bg-blue-500 text-white py-4 text-center"></h1>     
+    
+    <!-- data mentah
+              ↓
+     ┌────────┴─────────┐
+   ketua              anggota
+  'Daniel'      ['Mario', 'Intan']
+  -->
+    <script>   
+    //kumpulkan data yang masuk ke function menjadi array.
+                    //array-----
+    function daftarbuah(...buah){
+        document.getElementById('iniId1').textContent=buah;
+    }
+    //data untuk array-----------------
+    daftarbuah('apel','pisang','melon');
+
+
+    //parameter diambil dari argument pertama.
+               //parameter--array------
+    function data(nama, ...datalengkap) {
+        console.log(nama);
+        console.log(datalengkap);
+    }                                   
+    data('Daniel', 19, 2024); //output  daniel [19,2024]
+
+
+    const pangkat = ['Daniel','Mario', 'Intan'];
+    //parameter--array-------akses-----
+    const [ketua, ...anggota] = pangkat;
+    console.log(ketua, anggota);
+    document.getElementById('iniId2').textContent=pangkat;
+    
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <!-- Ubah Ke Number -->
+    <h1 id="iniId3" class="bg-blue-700 text-white py-4 text-center"></h1>
+    <h1 id="iniId4" class="bg-blue-700 text-white py-4 text-center"></h1>
+
+    <!-- Mengambil Bilangan Bulat =
+     ngambil angka nya saja, kalo ada koma (.) 
+     nilai dibelakang nya ga kepanggil--> 
+    <h1 id="iniId5" class="bg-blue-900 text-white py-4 text-center"></h1>
+    <h1 id="iniId6" class="bg-blue-900 text-white py-4 text-center"></h1>
+
+    <!-- Mengambil Bilangan Angka & Desimal =
+     selain itu seperti huruf tidak terpanggil--> 
+    <h1 id="iniId7" class="bg-red-900 text-white py-4 text-center"></h1>
+    <h1 id="iniId8" class="bg-red-900 text-white py-4 text-center"></h1>
+
+    <script>
+        function string() {
+            const angka = 10000;
+            const boolean = true;
+
+            document.getElementById("iniId1").textContent =
+                "Sebelum diubah: " + angka + " " + boolean;
+
+            const NumbertoString = String(angka);
+            const BooltoString = String(boolean);
+
+            document.getElementById("iniId2").textContent =
+                "Setelah diubah: " + NumbertoString + " " + BooltoString;
+        } string();
+
+        function number() {
+            const angka = '200';
+            const desimal = '2.35';
+            const boolean = false;
+
+            document.getElementById("iniId3").textContent =
+                "Sebelum diubah: " + angka + " " + desimal + " " + boolean;
+
+            const StringtoNumber = Number(angka);
+            const StringtoDesimal = Number(desimal);
+            const BooleantoNumber = Number(boolean);
+
+            document.getElementById("iniId4").textContent =
+                "Setelah diubah: " +
+                StringtoNumber + " " +
+                StringtoDesimal + " " +
+                BooleantoNumber;
+        } number();
+
+        function parsingInteger() {
+            const angka1 = 10000;
+            const angka2 = 1.20;
+            const angka3 = '120abc';
+
+            document.getElementById("iniId5").textContent =
+                "Sebelum diubah: " + angka1 + " " + angka2 + " " + angka3;
+
+            const NumbertoInt = parseInt(angka1);
+            const DesimaltoInt = parseInt(angka2);
+            const StringtoInt = parseInt(angka3);
+
+            document.getElementById("iniId6").textContent =
+                "Setelah diubah: " + NumbertoInt + " " + DesimaltoInt + " " + StringtoInt;
+        } parsingInteger();
+
+        function floatDesimal() {
+            const angka1 = 10000;
+            const angka2 = 1.20;
+            const angka3 = '120abc';
+
+            document.getElementById("iniId7").textContent =
+                "Sebelum diubah: " + angka1 + " " + angka2 + " " + angka3;
+
+            const NumbertoFloat =parseFloat(angka1);
+            const DesimaltoFloat = parseFloat(angka2);
+            const StringtoFloat = parseFloat(angka3);
+
+            document.getElementById("iniId8").textContent =
+                "Setelah diubah: " + NumbertoFloat + " " + DesimaltoFloat + " " + StringtoFloat;
+        } floatDesimal();
+    </script>
+
+</body>
+
+</html>

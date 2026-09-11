@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId3" class="bg-blue-500 text-white py-4 text-center"></h1>      
+
+    <script>   
+    
+    //digunakan untuk menggabungkan array
+    const buah1 = ['apel', 'pisang'];
+    const buah2 = ['durian', 'anggur'];
+    const semuabuah = [...buah1,...buah2];
+    document.getElementById('iniId1').textContent=semuabuah;
+
+    //digunakan untuk menggabungkan objet
+    const data1 = {Nama: 'Daniel', Umur: 12};
+    const data2 = {kota: 'Surabaya', prodi: 'Informatika'};
+    const semuadata = {...data1,...data2};
+    document.getElementById('iniId2').textContent=JSON.stringify(semuadata);
+
+
+    //digunakan untuk menggabungkan array dan object
+    const sayuran = {Nama: 'Brokoli', warna: 'Hijau'};
+    const semua = [...buah1,...buah2,sayuran.Nama];
+    document.getElementById('iniId3').textContent=semua;
+
+    
+    </script>
+
+    
+
+</body>
+
+</html>

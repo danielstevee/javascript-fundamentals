@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>        
+    <h1 id="iniId3" class="bg-blue-500 text-white py-4 text-center"></h1>            
+    <h1 id="iniId4" class="bg-blue-500 text-white py-4 text-center"></h1>           
+    <script>
+    //Pakai Array kalau datanya berupa urutan
+    //array dimulai dari 0 susunan nya                
+    const buah = ['stoberi', 'apel', 'pisang'];
+    //untuk mengurutkan data bedasarkan huruf awal [apel, stoberi, pisang]
+    buah.sort(); 
+    document.getElementById('iniId1').textContent=buah;
+                                    //akses satuan-------
+    document.getElementById('iniId2').textContent=buah[2];
+    //akses satuan pakai nama--------------------------
+    const [buah1,buah2,buah3] = buah;
+    document.getElementById('iniId4').textContent=buah1;
+
+    //ubah nilai----
+    buah[1]='durian';
+    //tambah nilai-----
+    buah.push('nangka');
+    //hapus nilai akhir
+    buah.pop();
+    //hapus nilai awal
+    buah.shift();
+    //hapus bedasarkan index dan elemen
+                //0= index atau susunan keberapa
+                //1= hapus satu elemen klo 2 maka index 1 akan kehapus
+    buah.splice(0,1);
+    document.getElementById('iniId3').textContent=buah;
+    
+
+    //contoh push ke array dengan key dan value
+    const employees = [
+            {
+                data : 'pertama',
+            },
+        ];
+        function addemployes(name,email,joinYear){
+            employees.push({
+                name:'Daniel',
+                email: 'daniel@dicoding.com',
+                joinYear:2026,
+            });
+        }addemployes();
+    
+
+    </script>
+
+    
+
+</body>
+
+</html>

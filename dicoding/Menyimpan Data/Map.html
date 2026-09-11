@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>      
+
+    <script>   
+    //Map digunakan ketika kita ingin menyimpan banyak pasangan key dan value yang bisa ditambah atau diubah dengan mudah.
+    const productMap = new Map([
+    //key-----value----
+    ['nama', 'daniel'],
+    ['umur', 21],
+    ['angkatan', 2024]
+    ])
+    //ibarat Push kaya di aray-------------------
+    productMap.set('prodi', 'Teknik Informatika');
+    document.getElementById('iniId1').textContent=productMap.get('nama') + productMap.get('prodi');
+    
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>                              
+    <script>   
+        //Object digunakan ketika data memiliki nama dan isi yang tetap.       
+                                   //key--value
+                     //properti ---------------
+        const data = {Nama: 'Daniel', Umur: 21};    
+        //ubah data---
+        data.Umur = 22;                  //cara akses--------------------------
+        document.getElementById('iniId1').textContent=data.Nama +' '+data.Umur;
+
+        //akses pakai destructuring--------------------------------
+        const {Nama,Umur} = data;
+        document.getElementById('iniId2').textContent= Nama + Umur;
+
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- = untuk ganti / timpa
+        += untuk tambah / tidak menimpa
+        
+        
+        /**
+ */-->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+       // a dan b mengambil nilai 2 dan 4
+        function hitung(a,b) { // a,b ambil nilai 2,4
+        return a * b; // hasil disimpan di const result
+        }
+
+        // operasi menerima sebuah function
+        function proses(operasi,c,d) { // proses, tanda nya proses dulu function hitung
+        return operasi (c,d);   // c dan d ini untuk simpan nilai 2,4
+        }
+
+        const result = proses(hitung,2,4); // setelah itu di simpan di result
+        document.getElementById('iniId1').textContent=result;
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-700 text-white py-4 text-center"></h1>
+    <script>
+        const umur = 20;
+                        //kondisi ? nilaiJikaBenar : nilaiJikaSalah;
+        const status = umur >= 15 ? 'Dewasa' : 'Bocah';
+        document.getElementById('iniId1').textContent=status;
+
+
+        const price = 100000;
+        const isMember = true;
+                        //kondisi ? nilaiJikaBenar : nilaiJikaSalah;
+        const discount = isMember? 0.1 : 0;
+        document.getElementById('iniId2').textContent='Potongan sebesar ' + discount * price ;
+
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>      
+
+    <script>   
+    //dipakai kalau kita cuma ingin menyimpan data yang berbeda-beda namun satu kategori.
+    //biasa dipakai daftar akun yang nama nya ga boleh sama saat daftar
+    const nama = new Set();
+            //value----
+    nama.add('Daniel');
+    nama.add('Steven');
+    nama.add('Setyawan');
+
+    document.getElementById('iniId1').textContent=nama.has('Daniel');;
+    </script>
+
+    
+
+</body>
+
+</html>

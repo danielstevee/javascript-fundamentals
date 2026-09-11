@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <!-- = untuk ganti / timpa
+        += untuk tambah / tidak menimpa-->
+    <script>
+        function convertCelsiusToFahrenheit(temperatue = 50) {
+            const temperatureInFahrenheit = 9 / 5 * temperatue + 32;
+            document.getElementById("iniId1").textContent += "Hasil: " + temperatureInFahrenheit + ' ';
+        } convertCelsiusToFahrenheit();//ini temperatute jadi default =50 jadi hasil 122
+        convertCelsiusToFahrenheit(90);//ini tidak default karena ada nilai nya jadi hasi 194
+
+    </script>
+
+    
+
+</body>
+
+</html>

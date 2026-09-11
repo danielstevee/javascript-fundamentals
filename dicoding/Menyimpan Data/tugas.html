@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <h1 id="iniId2" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <script>
+const products = [
+    {
+        name: 'Laptop',
+        price: 10000000,
+        category: 'Elektronik',
+    },
+];
+function addProduct(name, price, category) {
+    //push nilai ke array products
+    products.push({  
+    nama :name,
+    harga :price,
+    kategori: category});
+}
+//start function dgn nilai ini-------------
+addProduct('Handphone', 5000, 'Elektronik');
+        console.log(products);
+
+    </script>
+
+
+
+</body>
+
+</html>
