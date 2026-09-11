@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        
+        const nama= 'Daniel'
+        const password= 'Kyura567'
+        do{
+            //Cek kondisi benar---------------------------
+            if (nama==='Daniel' && password ==='Kyura567') {
+                document.getElementById('iniId1').textContent='Halo Daniel';
+                break;
+            }
+
+            //Tampilan while---
+            console.log('Salah')
+            //Cek kondisi salah----------------------------
+        }while(nama !== 'Daniel' || password !=='Kyura567');
+    </script>
+
+    
+
+</body>
+
+</html>

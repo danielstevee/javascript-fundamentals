@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <script>
+        // for...in  → looping KEY / PROPERTY
+        const user = {
+        //Property---Nilai
+            name: "Daniel",
+            age: 21
+        };
+        for (const data in user){
+            console.log(data);                              //Property----Nilai
+            document.getElementById('iniId1').textContent += data + user[data];
+        }
+        // PUTARAN 1 → data = "name"
+        // user[data] → "Daniel"
+
+        // PUTARAN 2 → data = "age"
+        // user[data] → 21
+    </script>
+
+
+
+</body>
+
+</html>

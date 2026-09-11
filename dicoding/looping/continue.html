@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+    <script>
+        const nilai = [80, 50, 40, 90, 100, 70, 60];
+        for (const data of nilai){
+            //nilai terhubung ke data
+            if(data <= 60){
+                //continue= skip angka dibawah 60, jadi(40,50,60) di skip
+                continue;
+            }                                 
+            document.getElementById('iniId1').textContent +=  'lulus : ' + data +' ';
+        }
+    </script>
+
+
+
+</body>
+
+</html>
