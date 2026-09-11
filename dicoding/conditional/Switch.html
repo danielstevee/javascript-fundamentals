@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        const umur = 21;
+        // switch(variabel) → cocokkan dengan nilai tertentu contoh case 12, case 'Halo'
+        //switch(true)  = cocok bedasarkan kondisi >=, <=, ===, ==
+        switch(true){
+            //cek kondisi---
+            case umur >= 22:
+            document.getElementById('iniId1').textContent= 'Kamu Dewasa';
+            break;
+
+            case umur >= 18:
+            document.getElementById('iniId1').textContent= 'Kamu Remaja';
+            break;
+
+            //default = tidak ada satupun diatas-----------------------------
+            default:
+            document.getElementById('iniId1').textContent= 'Belum Cukup Umur';
+        }
+    </script>
+
+    
+
+</body>
+
+</html>
