@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        // deepFreeze = mengunci object sampai ke dalam-dalamnya
+        function deepFreeze(object) {
+
+            // Mengambil semua nama property dari object
+            // Contoh: name, email, preferences
+            Object.keys(object).forEach((name) => {
+
+                // Mengambil nilai dari property tersebut
+                const prop = object[name];
+
+                // Cek apakah property tersebut adalah object
+                // dan bukan null
+                if (typeof prop == 'object' && prop !== null) {
+
+                    // Kalau ternyata ada object di dalam object,
+                    // masuk lagi ke dalam object tersebut
+                    deepFreeze(prop);
+                }
+            });
+
+            // Setelah bagian dalamnya selesai dikunci,
+            // object ini juga dikunci
+            return Object.freeze(object);
+        }
+
+
+        // Object utama
+        const complexUser = {
+            name: 'Bob',
+            email: 'bob@dicoding.com',
+
+            // Object di dalam object
+            preferences: {
+                newsletter: true,
+                notifications: 'weekly',
+
+                // Object yang lebih dalam lagi
+                address: {
+                    city: 'New York',
+                    zip: '10001'
+                }
+            }
+        };
+
+
+        // Mengunci complexUser sampai ke object yang paling dalam
+        deepFreeze(complexUser);
+
+
+        // Mencoba mengubah city
+        // Karena sudah di-deepFreeze, perubahan ini diabaikan
+        complexUser.preferences.address.city = 'Los Angeles';
+
+
+        // Nilainya tetap "New York"
+        console.log(complexUser.preferences.address.city);
+        // Output: 'New York'
+    </script>
+
+
+
+</body>
+
+</html>

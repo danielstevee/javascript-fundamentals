@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        // HOF = function sum di terima menjadi argument di dalam operation 
+        // Menerima function sebagai argument
+        //function----argument------------
+        function apply(operation, ...args) {
+
+            // Menjalankan function yang diterima
+            // ...args membongkar array menjadi argument
+            return operation(...args);
+        }
+
+
+        // Function biasa
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+
+
+        // Mengirim function sum ke apply
+        const hasil = apply(sum, 10, 20, 30);
+
+        console.log(hasil); // 60
+    </script>
+
+
+
+</body>
+
+</html>

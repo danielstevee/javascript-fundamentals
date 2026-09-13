@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ubah Ke String -->
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        // =====================================================
+        // PARENT CLASS
+        // =====================================================
+
+        class Hewan {
+
+            constructor(nama, umur) {
+
+                // Data yang dimiliki semua Hewan
+                this.nama = nama;
+                this.umur = umur;
+            }
+
+            // Method yang bisa diwarisi oleh Child
+            makan() {
+                console.log(`${this.nama} sedang makan`);
+            }
+
+            tidur() {
+                console.log(`${this.nama} sedang tidur`);
+            }
+
+            // Method yang nanti bisa ditimpa/di-override oleh Child
+            suara() {
+                console.log("Hewan mengeluarkan suara");
+            }
+        }
+
+
+        // =====================================================
+        // CHILD CLASS 1
+        // =====================================================
+
+        class Kucing extends Hewan {
+
+            // Kalau Child ingin punya data tambahan,
+            // maka kita buat constructor sendiri
+            constructor(nama, umur, warna) {
+                // ambil/inisialisasi data dari Parent
+                super(nama, umur);
+
+                // Data tambahan khusus Kucing
+                this.warna = warna;
+            }
+
+            // Menimpa method suara() dari Parent
+            // Nama method tetap sama, tetapi isinya berbeda
+            suara() {
+                console.log(`${this.nama}: Meong!`);
+            }
+
+            // Method khusus Kucing
+            mengeong() {
+                console.log(`${this.nama} sedang mengeong`);
+            }
+        }
+
+
+        // =====================================================
+        // CHILD CLASS 2
+        // =====================================================
+        class Sapi extends Hewan {
+
+            // Sapi juga punya data tambahan yaitu berat
+            constructor(nama, umur, berat) {
+                // ambil/inisialisasi data dari Parent
+                super(nama, umur);
+
+                // Data tambahan khusus Sapi
+                this.berat = berat;
+            }
+
+            // Menimpa method suara() dari Parent
+            // Isinya dibuat berbeda dari Kucing
+            suara() {
+                console.log(`${this.nama}: Moo!`);
+            }
+
+            // Method khusus Sapi
+            melenguh() {
+                console.log(`${this.nama} sedang melenguh`);
+            }
+        }
+
+
+        // =====================================================
+        // MEMBUAT OBJECT
+        // =====================================================
+
+        // Kucing membutuhkan:
+        // nama, umur, warna
+        const kucing = new Kucing("Milo", 2, "Putih");
+
+        // Sapi membutuhkan:
+        // nama, umur, berat
+        const sapi = new Sapi("Bobby", 5, 300);
+
+
+        // =====================================================
+        // INHERITANCE
+        // =====================================================
+
+        // Kucing mendapatkan method dari Hewan
+        kucing.makan();
+        kucing.tidur();
+
+        // Sapi juga mendapatkan method dari Hewan
+        sapi.makan();
+        sapi.tidur();
+
+
+        // =====================================================
+        // POLYMORPHISM
+        // =====================================================
+
+        // Nama method sama: suara()
+        // Tetapi hasilnya berbeda
+
+        kucing.suara(); // Milo: Meong!
+        sapi.suara();   // Bobby: Moo!
+
+
+        // =====================================================
+        // DATA TAMBAHAN CHILD
+        // =====================================================
+
+        console.log(kucing.warna); // Putih
+        console.log(sapi.berat);   // 300
+
+
+        // =====================================================
+        // METHOD KHUSUS CHILD
+        // =====================================================
+
+        kucing.mengeong();
+        sapi.melenguh();
+
+    </script>
+
+</body>
+
+</html>

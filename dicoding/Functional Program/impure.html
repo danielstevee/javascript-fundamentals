@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        let total = 0;
+        // Fungsi untuk menambahkan value ke total
+        function tambah(value) {
+            // total ditambah dengan value
+            total += value;
+        }
+        // value = 10 → total: 0 + 10 = 10
+        tambah(10);
+        // value = 10 → total: 10 + 10 = 20
+        tambah(10);
+        // value = 10 → total: 20 + 10 = 30
+        tambah(10);
+        // menampilkan total 30
+        console.log(total);
+    </script>
+
+
+
+</body>
+
+</html>

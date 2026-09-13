@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        //untuk buat data baru tanpa mengubah data lama
+        //data lama---
+        const oldArray = ['Harry', 'Ron', 'Jeff', 'Thomas']
+        //data baru---
+        const newArray = oldArray.map((name) => `${name}!`);
+
+        console.log(newArray); // Output: [ 'Harry!', 'Ron!', 'Jeff!', 'Thomas!' ]
+        console.log(oldArray); // Output: [ 'Harry', 'Ron', 'Jeff', 'Thomas' ]
+    </script>
+
+
+
+</body>
+
+</html>

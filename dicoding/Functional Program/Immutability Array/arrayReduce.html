@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        //Untuk menggabungkan data menjadi satu hasil
+        const students = [
+            {
+                name: 'Harry',
+                score: 60,
+            },
+            {
+                name: 'James',
+                score: 88,
+            },
+            {
+                name: 'Ron',
+                score: 90,
+            },
+            {
+                name: 'Bethy',
+                score: 75,
+            }
+        ];
+                                    //Menggabungkan seluruh isi score student-------
+        const totalScore = students.reduce((acc, student) => acc + student.score, 0);
+
+        console.log(totalScore); // Output: 313
+    </script>
+
+
+
+</body>
+
+</html>

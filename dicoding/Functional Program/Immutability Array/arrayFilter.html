@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        //Untuk melakukan filter terhadap data seperti fitur searching
+        const students = [
+            {
+                name: 'Harry',
+                score: 60,
+            },
+            {
+                name: 'James',
+                score: 88,
+            },
+            {
+                name: 'Ron',
+                score: 90,
+            },
+            {
+                name: 'Bethy',
+                score: 75,
+            }
+        ];
+                                                //filter nilai student yang score nya dibawah 85
+        const eligibleForScholarshipStudents = students.filter((student) => student.score > 85);//hasilkan output yg score nya daitas 85
+
+        console.log(eligibleForScholarshipStudents);
+
+        /**
+         * Output:
+         * [ { name: 'James', score: 88 }, { name: 'Ron', score: 90 } ]
+         * 
+         */
+    </script>
+
+
+
+</body>
+
+</html>

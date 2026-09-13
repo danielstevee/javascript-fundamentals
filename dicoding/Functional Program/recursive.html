@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        function hitung(n) {
+
+            // 1. Kapan berhenti?
+            if (n === 0) {
+                return;
+            }
+
+            // 2. Apa yang dilakukan setiap putaran?
+            console.log(n);
+
+            // 3. Panggil function lagi dengan nilai baru
+            hitung(n - 1);
+        }
+
+        //untuk menghasilkan output array
+        function generateArray(n) {
+            if (n < 0) {
+                return [];
+            }
+                    //selesaikan dulu n-1 sampe dapat -1 lalu masukan ke array satu satu mulai dari 0-5 
+                    //jadi 5 → turun terus sampai -1 → dapat array kosong → naik kembali sambil menambahkan angka dari ,n ke array.
+            return [...generateArray(n - 1), n];
+        }
+
+        console.log(generateArray(5)); // Output: [0, 1, 2, 3, 4, 5]
+    </script>
+
+
+
+</body>
+
+</html>

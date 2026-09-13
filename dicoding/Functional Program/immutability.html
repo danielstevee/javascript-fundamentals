@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="iniId1" class="bg-blue-500 text-white py-4 text-center"></h1>
+
+    <script>
+        //Immutabilty membuat data baru tanpa mengubah data awal
+        const user = {
+            name: "Daniel",
+            age: 21
+        };
+
+        function updateAge(user) {
+            return {
+                //Ambil semua property yang ada di dalam user, lalu masukkan ke object baru.
+                ...user,
+                age: 22
+            };
+        }
+
+        const updatedUser = updateAge(user);
+
+        console.log(user.age);        // 21
+        console.log(updatedUser.age); // 22
+
+        //contoh lagi =====================================================
+        function registerEmail(person, email) {
+            // menggunakan spread operator untuk menduplikasi nilai person
+            return { ...person, email };
+        }
+
+        const person = {
+            name: 'John',
+            username: 'johndoe',
+        };
+
+        const personWithEmail = registerEmail(person, 'john@dicoding.com');
+
+        console.log(person); // Output: { name: 'John', username: 'johndoe' }
+        console.log(personWithEmail); // Output: { name: 'John', username: 'johndoe', email: 'john@dicoding.com' }
+
+        //pengunaan array.map untuk immutability
+        const oldArray = ['Harry', 'Ron', 'Jeff', 'Thomas']
+        const newArray = oldArray.map((name) => `${name}!`);
+
+        console.log(newArray); // Output: [ 'Harry!', 'Ron!', 'Jeff!', 'Thomas!' ]
+        console.log(oldArray); // Output: [ 'Harry', 'Ron', 'Jeff', 'Thomas' ]
+    </script>
+
+
+
+</body>
+
+</html>
