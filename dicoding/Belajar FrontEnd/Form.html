@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        button {
+            margin: 5px 0;
+            padding: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DOM Event Practice</h1>
+
+    <!-- FORM -->
+    <div class="box">
+
+        <form id="myForm">
+
+            <!-- oninput -->
+            <label>
+                Nama:
+                <input type="text" id="nama" placeholder="Masukkan nama" required>
+            </label>
+
+            <br>
+
+            <!-- onchange -->
+            <label>
+                Pilih kelas:
+                <select id="kelas">
+                    <option value="">-- Pilih --</option>
+                    <option value="TI A">TI A</option>
+                    <option value="TI B">TI B</option>
+                    <option value="TI C">TI C</option>
+                </select>
+            </label>
+
+            <br>
+
+            <!-- onfocus + onblur -->
+            <label>
+                Email:
+                <input type="email" id="email" placeholder="Masukkan email" required>
+            </label>
+
+            <br>
+
+            <button type="submit" value="Submit Data">Submit</button>
+
+        </form>
+
+    </div>
+
+    <!-- COPY & PASTE -->
+    <div class="box">
+
+        <p id="copyText">
+            Teks ini bisa kamu copy.
+        </p>
+
+        <input
+            type="text"
+            id="pasteInput"
+            placeholder="Paste sesuatu di sini"
+        >
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output">
+        Event akan ditampilkan di sini.
+    </div>
+
+
+    <script>
+
+        // =========================
+        // AMBIL ELEMENT
+        // =========================
+
+        const form = document.getElementById("myForm");
+        const nama = document.getElementById("nama");
+        const kelas = document.getElementById("kelas");
+        const email = document.getElementById("email");
+
+        const copyText = document.getElementById("copyText");
+        const pasteInput = document.getElementById("pasteInput");
+
+        const output = document.getElementById("output");
+
+
+        // =========================
+        // ONSUBMIT
+        // =========================
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            output.textContent = "Form berhasil disubmit!";
+
+        });
+
+
+        // =========================
+        // ONINPUT
+        // =========================
+
+        nama.addEventListener("input", function () {
+
+            output.textContent =
+                "Kamu sedang mengetik: " + nama.value;
+
+        });
+
+
+        // =========================
+        // ONCHANGE
+        // =========================
+
+        kelas.addEventListener("change", function () {
+
+            output.textContent =
+                "Kelas yang dipilih: " + kelas.value;
+
+        });
+
+
+        // =========================
+        // ONCOPY
+        // =========================
+
+        copyText.addEventListener("copy", function () {
+
+            output.textContent =
+                "Teks berhasil di-copy!";
+
+        });
+
+
+        // =========================
+        // ONPASTE
+        // =========================
+
+        pasteInput.addEventListener("paste", function () {
+
+            output.textContent =
+                "Teks berhasil di-paste!";
+
+        });
+
+        // =========================
+        // ONFOCUS
+        // =========================
+
+        email.addEventListener("focus", function () {
+
+            output.textContent =
+                "Field email sedang dipilih.";
+
+        });
+
+        // =========================
+        // ONBLUR
+        // =========================
+
+        email.addEventListener("blur", function () {
+
+            output.textContent =
+                "Field email sudah tidak dipilih.";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

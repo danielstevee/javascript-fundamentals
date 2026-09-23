@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <body>
+    <p id="name">Langkah-langkah memasak air</p>
+    <ol id="daftar">
+    
+      <li id="awal">Masukkan air ke dalam wadah.</li>
+      <li id="akhir">Matikan kompor.</li>
+    </ol>
+    <hr size="2" width="95%" color="black">
+  </body>
+
+  <script>
+    //appendChild() → tambahkan ke belakang
+    //insertBefore() → sisipkan sebelum target
+    const newElement = document.createElement('li');
+    const daftar = document.getElementById('daftar')
+    newElement.innerText = 'Selamat menikmati'; 
+    //Masukkan newElement sebagai child dari daftar.
+    daftar.appendChild(newElement);
+
+    const elementAwal = document.createElement('li');
+    elementAwal.innerText = 'Hidupkan Kompor';
+    //children[0] = berdasarkan posisi
+    daftar.insertBefore (elementAwal,daftar.children[0]);
+
+  </script>
+</html>

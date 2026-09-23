@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .contents {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        padding: 15px;
+    }
+
+    #generateButton {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        ;
+    }
+</style>
+</head>
+
+<body>
+    <div class="contents" align="center" hidden>
+        <button id="incrementButton">Tekan Aku :</button>
+        <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            alert("Halaman sudah selesai dimuat!");
+            const contens = document.querySelector('.contents');
+            contens.removeAttribute('hidden');
+        };
+
+        let count = 0
+        function tombol() {
+            count++;
+            document.getElementById('count').textContent = count;
+
+            if (count === 10) {
+                const text = document.createElement('h6');
+                text.textContent = 'Ini Hadiah Mu';
+
+                const container = document.querySelector('.contents');
+                container.appendChild(text);
+
+                document.getElementById('incrementButton').disabled = true;
+            }
+        }
+        const button = document.getElementById('incrementButton');
+        button.addEventListener("click", tombol);
+
+    </script>
+</body>
+
+</html>

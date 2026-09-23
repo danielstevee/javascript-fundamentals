@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .contents {
+        border: 2px solid black;
+        padding: 15px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div class="contents">
+        <h2 align="center">Isi data diri</h2>
+
+        <div class="formContent">
+            <form id="formDataDiri" >
+                <div class="form-element">
+                    <label for="inputNama">Nama:</label><br />
+                    <input type="text" id="inputNama" name="nama" placeholder="Nama Anda" required /><br />
+                </div>
+
+                <div class="form-element">
+                    <label for="inputDomisili">Domisili:</label><br />
+                    <input type="text" id="inputDomisili" name="domisili" placeholder="Domisili Anda" required /><br />
+                </div>
+
+                <div class="form-element">
+                    <input id="submitButton" type="submit" value="Submit Data" />
+                </div>
+            </form>
+        </div>
+        <h3 id="messageAfterSubmit"></h3>
+    </div>
+
+    <script>
+        const submitAction = document.getElementById('formDataDiri');
+                                //saat submit, function aktif----
+        submitAction.addEventListener('submit', function (event){
+            //untuk simpan semua value yang ada di formDataDiri---------------------
+            const nama = document.getElementById('inputNama').value;
+            const domisili = document.getElementById('inputDomisili').value;
+            const pesan = `halo, ${nama}.  Bagaimana cuacanya di ${inputDomisili}?`;
+
+            //untuk masukin pesan kedalam h3
+            document.getElementById('messageAfterSubmit').textContent= pesan;
+            //mencegah reload/navigasi halaman.
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
